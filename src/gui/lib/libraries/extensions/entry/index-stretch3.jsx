@@ -59,7 +59,7 @@ const entry = {
         <FormattedMessage
             defaultMessage="Connecting"
             description="Message to help people connect to the Websock extension."
-            id="websockExt.entry.description"
+            id="websockExt.entry.Connecting"
         />
     ),
     helpLink: 'https://kitaratch.github.io/',
