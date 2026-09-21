@@ -32,6 +32,16 @@ cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/connection-icon.svg s
 cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/connection-small-icon.svg src/lib/libraries/extensions/${EXTENSION_ID}/
 cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/translations.json src/lib/libraries/extensions/${EXTENSION_ID}/
 
+### copy entry files2
+mkdir -p node_modules/scratch-vm/src/extensions/${EXTENSION_ID}
+cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/index-stretch3.jsx node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/index.jsx
+cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/entry-icon.png node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
+cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/inset-icon.svg node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
+cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/connection-icon.svg node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
+cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/connection-small-icon.svg node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
+cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/translations.json node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
+
+
 ### insert it to the library
 # keep the pristine original on first run only, using a suffix unique to this extension so other extensions' installers don't collide
 LIBRARY_INDEX_ORIG=src/lib/libraries/extensions/index.jsx_orig_${EXTENSION_ID}
