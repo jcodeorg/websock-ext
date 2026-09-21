@@ -10,20 +10,20 @@ import pcratchIoTInsetIconURL from './inset-icon.svg';
 import pcratchIoTConnectionIconURL from './connection-icon.svg';
 import pcratchIoTConnectionSmallIconURL from './connection-small-icon.svg';
 
-const version = 'v0.2.2';
+const version = 'v0.2.1';
 const translations =
 {
     "en": {
-        "websockExt.entry.name": "Network Extension",
-        "websockExt.entry.description": `Network Extension (${version})`
+        "websockExt.entry.name": "Network Extension(v0.2.1)",
+        "websockExt.entry.description": "Network communication"
     },
     "ja": {
-        "websockExt.entry.name": "ネットワーク拡張",
-        "websockExt.entry.description": `ネットワーク拡張 (${version})`
+        "websockExt.entry.name": "ネットワーク拡張(v0.2.1)",
+        "websockExt.entry.description": "ネットワーク通信をします"
     },
     "ja-Hira": {
-        "websockExt.entry.name": "ネットワークかくちょう",
-        "websockExt.entry.description": `ネットワークかくちょう (${version})`
+        "websockExt.entry.name": "ネットワークかくちょう(v0.2.1)",
+        "websockExt.entry.description": "ネットワークつうしんをします"
     }
 };
 
@@ -58,8 +58,8 @@ const entry = {
     connectingMessage: (
         <FormattedMessage
             defaultMessage="Connecting"
-            description="Message to help people connect to their Pcratch IoT."
-            id="gui.extension.microbitMore.description"
+            description="Message to help people connect to the Websock extension."
+            id="websockExt.entry.description"
         />
     ),
     helpLink: 'https://kitaratch.github.io/',
