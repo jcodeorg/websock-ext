@@ -23,7 +23,7 @@ const entry = {
         });
     },
     extensionId: 'websockExt',
-    extensionURL: 'https://kitaratch.github.io/websock-ext/dist/websockExt.mjs',
+    extensionURL: 'https://jcodeorg.github.io/websock-ext/dist/websockExt.mjs',
     collaborator: '',
     iconURL: iconURL,
     insetIconURL: insetIconURL,

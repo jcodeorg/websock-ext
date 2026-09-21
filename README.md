@@ -12,7 +12,7 @@ npm run build
 
 
 ★ websockExt.mjs
-https://kitaratch.github.io/websock-ext/dist/websockExt.mjs
+https://jcodeorg.github.io/websock-ext/dist/websockExt.mjs
 
 ★テスト用のコピー
 scp ./dist/websockExt.mjs koichii@j-code.org:~/jcode-dev/pcratch/www/xcratch-extensions/websock-ext/dist/websockExt2.mjs

@@ -36,7 +36,7 @@ const entry = {
         />
     ),
     extensionId: 'websockExt',
-    extensionURL: 'https://kitaratch.github.io/websock-ext/dist/websockExt.mjs',
+    extensionURL: 'https://jcodeorg.github.io/websock-ext/dist/websockExt.mjs',
     collaborator: 'Programming Education Lab',
     iconURL: pcratchIoTIconURL,
     insetIconURL: pcratchIoTInsetIconURL,
