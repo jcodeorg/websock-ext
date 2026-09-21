@@ -36,7 +36,7 @@ const entry = {
         />
     ),
     extensionId: 'websockExt',
-    extensionURL: 'https://jcodeorg.github.io/websock-ext/dist/websockExt.mjs',
+    // built-in (stretch3) install: no extensionURL, so it loads via extensionId, not the sandboxed worker.
     collaborator: 'Programming Education Lab',
     iconURL: pcratchIoTIconURL,
     insetIconURL: pcratchIoTInsetIconURL,
