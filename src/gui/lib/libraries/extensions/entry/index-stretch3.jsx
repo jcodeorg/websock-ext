@@ -12,16 +12,16 @@ const version = 'v0.2.2';
 const translations =
 {
     "en": {
-        "pcratchIoT.entry.name": "Network Extension",
-        "pcratchIoT.entry.description": `Network Extension (${version})`
+        "websockExt.entry.name": "Network Extension",
+        "websockExt.entry.description": `Network Extension (${version})`
     },
     "ja": {
-        "pcratchIoT.entry.name": "ネットワーク拡張",
-        "pcratchIoT.entry.description": `ネットワーク拡張 (${version})`
+        "websockExt.entry.name": "ネットワーク拡張",
+        "websockExt.entry.description": `ネットワーク拡張 (${version})`
     },
     "ja-Hira": {
-        "pcratchIoT.entry.name": "ネットワークかくちょう",
-        "pcratchIoT.entry.description": `ネットワークかくちょう (${version})`
+        "websockExt.entry.name": "ネットワークかくちょう",
+        "websockExt.entry.description": `ネットワークかくちょう (${version})`
     }
 };
 
