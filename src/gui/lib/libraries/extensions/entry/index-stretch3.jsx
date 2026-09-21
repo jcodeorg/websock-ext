@@ -7,8 +7,6 @@ import {FormattedMessage} from 'react-intl';
 
 import pcratchIoTIconURL from './entry-icon.png';
 import pcratchIoTInsetIconURL from './inset-icon.svg';
-import pcratchIoTConnectionIconURL from './connection-icon.svg';
-import pcratchIoTConnectionSmallIconURL from './connection-small-icon.svg';
 
 const version = 'v0.2.2';
 const translations =
