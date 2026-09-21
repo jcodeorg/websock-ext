@@ -32,7 +32,7 @@ const EXTENSION_ID = 'websockExt';
  * When it was loaded as a module, 'extensionURL' will be replaced a URL which is retrieved from.
  * @type {string}
  */
-let extensionURL = 'https://pcratch.j-code.org/xcratch-extensions/websock-ext/dist/websockExt.mjs';
+let extensionURL = 'https://kitaratch.github.io/websock-ext/dist/websockExt.mjs';
 
 /**
  * Scratch 3.0 blocks for example of Xcratch.

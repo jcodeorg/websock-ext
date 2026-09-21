@@ -1,9 +1,18 @@
 # How to install
 
 ★ビルド
-ソースコードを、ローカルから開発マシンへコピー
-cd ~/pcratch/xcratch-extensions/websock-ext
+1. ソースコードを、ローカルから開発マシンへコピー
+例：cd ~/pcratch/xcratch-extensions/websock-ext
+
+2. レポジトリのディレクトリと並列に scratch-gui ディレクトリを準備(buildの途中で必要になる・・・らしい)
+../scratch-gui
+
+3. build
 npm run build
+
+
+★ websockExt.mjs
+https://kitaratch.github.io/websock-ext/dist/websockExt.mjs
 
 ★テスト用のコピー
 scp ./dist/websockExt.mjs koichii@j-code.org:~/jcode-dev/pcratch/www/xcratch-extensions/websock-ext/dist/websockExt2.mjs

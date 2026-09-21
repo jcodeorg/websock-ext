@@ -3,18 +3,18 @@ var img$2 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAFzCAYAAADi5Xe0A
 var img$1 = "data:image/svg+xml,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='152.06552' height='163.58806' viewBox='0%2c0%2c152.06552%2c163.58806'%3e%3cg transform='translate(-163.96724%2c-98.20597)'%3e%3cg data-paper-data='%7b%26quot%3bisPaintingLayer%26quot%3b:true%7d' fill-rule='nonzero' stroke='black' stroke-width='0.5' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' style='mix-blend-mode: normal'%3e%3cpath d='M164.21724%2c261.54403v-163.08806h151.56552v163.08806z' fill='%23f7f7f7'/%3e%3cpath d='M189.82568%2c217.21608v-72.53493h102.84804v72.53493z' fill='white'/%3e%3cpath d='M213.6822%2c195.73702v-28.42734h12.18314v28.42734z' fill='%23b1b1b1'/%3e%3cpath d='M253.49118%2c196.09582v-28.42733h12.18314v28.42734z' fill='%23b1b1b1'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e";
 
 var en$1 = {
-	"websockExt.entry.name": "Network Extension(v0.1.2)",
+	"websockExt.entry.name": "Network Extension(v0.2.1)",
 	"websockExt.entry.description": "Network communication"
 };
 var ja$1 = {
-	"websockExt.entry.name": "ネットワーク拡張(v0.1.2)",
+	"websockExt.entry.name": "ネットワーク拡張(v0.2.1)",
 	"websockExt.entry.description": "ネットワーク通信をします"
 };
 var translations$1 = {
 	en: en$1,
 	ja: ja$1,
 	"ja-Hira": {
-	"websockExt.entry.name": "ネットワークかくちょう(v0.1.2)",
+	"websockExt.entry.name": "ネットワークかくちょう(v0.2.1)",
 	"websockExt.entry.description": "ネットワークつうしんをします"
 }
 };
@@ -41,7 +41,7 @@ var entry = {
     });
   },
   extensionId: 'websockExt',
-  extensionURL: 'https://pcratch.j-code.org/xcratch-extensions/websock-ext/dist/websockExt.mjs',
+  extensionURL: 'https://kitaratch.github.io/websock-ext/dist/websockExt.mjs',
   collaborator: '',
   iconURL: img$2,
   insetIconURL: img$1,
@@ -63,85 +63,72 @@ var entry = {
   translationMap: translations$1
 };
 
-function _typeof$1(obj) {
+function _typeof$1(o) {
   "@babel/helpers - typeof";
 
-  return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
-    return typeof obj;
-  } : function (obj) {
-    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-  }, _typeof$1(obj);
+  return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof$1(o);
 }
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+function asyncGeneratorStep(n, t, e, r, o, a, c) {
   try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
+    var i = n[a](c),
+      u = i.value;
+  } catch (n) {
+    return void e(n);
   }
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
+  i.done ? t(u) : Promise.resolve(u).then(r, o);
 }
-function _asyncToGenerator(fn) {
+function _asyncToGenerator(n) {
   return function () {
-    var self = this,
-      args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+    var t = this,
+      e = arguments;
+    return new Promise(function (r, o) {
+      var a = n.apply(t, e);
+      function _next(n) {
+        asyncGeneratorStep(a, r, o, _next, _throw, "next", n);
       }
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      function _throw(n) {
+        asyncGeneratorStep(a, r, o, _next, _throw, "throw", n);
       }
-      _next(undefined);
+      _next(void 0);
     });
   };
 }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function _classCallCheck(a, n) {
+  if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function");
 }
 
-function _toPrimitive(input, hint) {
-  if (_typeof$1(input) !== "object" || input === null) return input;
-  var prim = input[Symbol.toPrimitive];
-  if (prim !== undefined) {
-    var res = prim.call(input, hint || "default");
-    if (_typeof$1(res) !== "object") return res;
+function toPrimitive(t, r) {
+  if ("object" != _typeof$1(t) || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r || "default");
+    if ("object" != _typeof$1(i)) return i;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return (hint === "string" ? String : Number)(input);
+  return ("string" === r ? String : Number)(t);
 }
 
-function _toPropertyKey(arg) {
-  var key = _toPrimitive(arg, "string");
-  return _typeof$1(key) === "symbol" ? key : String(key);
+function toPropertyKey(t) {
+  var i = toPrimitive(t, "string");
+  return "symbol" == _typeof$1(i) ? i : i + "";
 }
 
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
+function _defineProperties(e, r) {
+  for (var t = 0; t < r.length; t++) {
+    var o = r[t];
+    o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, toPropertyKey(o.key), o);
   }
 }
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  Object.defineProperty(Constructor, "prototype", {
-    writable: false
-  });
-  return Constructor;
+function _createClass(e, r, t) {
+  return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", {
+    writable: !1
+  }), e;
 }
 
 var regeneratorRuntime$1 = {exports: {}};
@@ -149,14 +136,14 @@ var regeneratorRuntime$1 = {exports: {}};
 var _typeof = {exports: {}};
 
 (function (module) {
-  function _typeof(obj) {
+  function _typeof(o) {
     "@babel/helpers - typeof";
 
-    return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
-      return typeof obj;
-    } : function (obj) {
-      return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(obj);
+    return module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+      return typeof o;
+    } : function (o) {
+      return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+    }, module.exports.__esModule = true, module.exports["default"] = module.exports, _typeof(o);
   }
   module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 })(_typeof);
@@ -167,310 +154,304 @@ var _typeof = {exports: {}};
 
     /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
     module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
-      return exports;
+      return e;
     }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-    var exports = {},
-      Op = Object.prototype,
-      hasOwn = Op.hasOwnProperty,
-      defineProperty = Object.defineProperty || function (obj, key, desc) {
-        obj[key] = desc.value;
+    var t,
+      e = {},
+      r = Object.prototype,
+      n = r.hasOwnProperty,
+      o = Object.defineProperty || function (t, e, r) {
+        t[e] = r.value;
       },
-      $Symbol = "function" == typeof Symbol ? Symbol : {},
-      iteratorSymbol = $Symbol.iterator || "@@iterator",
-      asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
-      toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-    function define(obj, key, value) {
-      return Object.defineProperty(obj, key, {
-        value: value,
+      i = "function" == typeof Symbol ? Symbol : {},
+      a = i.iterator || "@@iterator",
+      c = i.asyncIterator || "@@asyncIterator",
+      u = i.toStringTag || "@@toStringTag";
+    function define(t, e, r) {
+      return Object.defineProperty(t, e, {
+        value: r,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }), obj[key];
+      }), t[e];
     }
     try {
       define({}, "");
-    } catch (err) {
-      define = function define(obj, key, value) {
-        return obj[key] = value;
+    } catch (t) {
+      define = function define(t, e, r) {
+        return t[e] = r;
       };
     }
-    function wrap(innerFn, outerFn, self, tryLocsList) {
-      var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
-        generator = Object.create(protoGenerator.prototype),
-        context = new Context(tryLocsList || []);
-      return defineProperty(generator, "_invoke", {
-        value: makeInvokeMethod(innerFn, self, context)
-      }), generator;
+    function wrap(t, e, r, n) {
+      var i = e && e.prototype instanceof Generator ? e : Generator,
+        a = Object.create(i.prototype),
+        c = new Context(n || []);
+      return o(a, "_invoke", {
+        value: makeInvokeMethod(t, r, c)
+      }), a;
     }
-    function tryCatch(fn, obj, arg) {
+    function tryCatch(t, e, r) {
       try {
         return {
           type: "normal",
-          arg: fn.call(obj, arg)
+          arg: t.call(e, r)
         };
-      } catch (err) {
+      } catch (t) {
         return {
           type: "throw",
-          arg: err
+          arg: t
         };
       }
     }
-    exports.wrap = wrap;
-    var ContinueSentinel = {};
+    e.wrap = wrap;
+    var h = "suspendedStart",
+      l = "suspendedYield",
+      f = "executing",
+      s = "completed",
+      y = {};
     function Generator() {}
     function GeneratorFunction() {}
     function GeneratorFunctionPrototype() {}
-    var IteratorPrototype = {};
-    define(IteratorPrototype, iteratorSymbol, function () {
+    var p = {};
+    define(p, a, function () {
       return this;
     });
-    var getProto = Object.getPrototypeOf,
-      NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-    NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
-    var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
-    function defineIteratorMethods(prototype) {
-      ["next", "throw", "return"].forEach(function (method) {
-        define(prototype, method, function (arg) {
-          return this._invoke(method, arg);
+    var d = Object.getPrototypeOf,
+      v = d && d(d(values([])));
+    v && v !== r && n.call(v, a) && (p = v);
+    var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p);
+    function defineIteratorMethods(t) {
+      ["next", "throw", "return"].forEach(function (e) {
+        define(t, e, function (t) {
+          return this._invoke(e, t);
         });
       });
     }
-    function AsyncIterator(generator, PromiseImpl) {
-      function invoke(method, arg, resolve, reject) {
-        var record = tryCatch(generator[method], generator, arg);
-        if ("throw" !== record.type) {
-          var result = record.arg,
-            value = result.value;
-          return value && "object" == _typeof$1(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
-            invoke("next", value, resolve, reject);
-          }, function (err) {
-            invoke("throw", err, resolve, reject);
-          }) : PromiseImpl.resolve(value).then(function (unwrapped) {
-            result.value = unwrapped, resolve(result);
-          }, function (error) {
-            return invoke("throw", error, resolve, reject);
+    function AsyncIterator(t, e) {
+      function invoke(r, o, i, a) {
+        var c = tryCatch(t[r], t, o);
+        if ("throw" !== c.type) {
+          var u = c.arg,
+            h = u.value;
+          return h && "object" == _typeof$1(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) {
+            invoke("next", t, i, a);
+          }, function (t) {
+            invoke("throw", t, i, a);
+          }) : e.resolve(h).then(function (t) {
+            u.value = t, i(u);
+          }, function (t) {
+            return invoke("throw", t, i, a);
           });
         }
-        reject(record.arg);
+        a(c.arg);
       }
-      var previousPromise;
-      defineProperty(this, "_invoke", {
-        value: function value(method, arg) {
+      var r;
+      o(this, "_invoke", {
+        value: function value(t, n) {
           function callInvokeWithMethodAndArg() {
-            return new PromiseImpl(function (resolve, reject) {
-              invoke(method, arg, resolve, reject);
+            return new e(function (e, r) {
+              invoke(t, n, e, r);
             });
           }
-          return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+          return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
         }
       });
     }
-    function makeInvokeMethod(innerFn, self, context) {
-      var state = "suspendedStart";
-      return function (method, arg) {
-        if ("executing" === state) throw new Error("Generator is already running");
-        if ("completed" === state) {
-          if ("throw" === method) throw arg;
-          return doneResult();
+    function makeInvokeMethod(e, r, n) {
+      var o = h;
+      return function (i, a) {
+        if (o === f) throw Error("Generator is already running");
+        if (o === s) {
+          if ("throw" === i) throw a;
+          return {
+            value: t,
+            done: !0
+          };
         }
-        for (context.method = method, context.arg = arg;;) {
-          var delegate = context.delegate;
-          if (delegate) {
-            var delegateResult = maybeInvokeDelegate(delegate, context);
-            if (delegateResult) {
-              if (delegateResult === ContinueSentinel) continue;
-              return delegateResult;
+        for (n.method = i, n.arg = a;;) {
+          var c = n.delegate;
+          if (c) {
+            var u = maybeInvokeDelegate(c, n);
+            if (u) {
+              if (u === y) continue;
+              return u;
             }
           }
-          if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
-            if ("suspendedStart" === state) throw state = "completed", context.arg;
-            context.dispatchException(context.arg);
-          } else "return" === context.method && context.abrupt("return", context.arg);
-          state = "executing";
-          var record = tryCatch(innerFn, self, context);
-          if ("normal" === record.type) {
-            if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
+          if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) {
+            if (o === h) throw o = s, n.arg;
+            n.dispatchException(n.arg);
+          } else "return" === n.method && n.abrupt("return", n.arg);
+          o = f;
+          var p = tryCatch(e, r, n);
+          if ("normal" === p.type) {
+            if (o = n.done ? s : l, p.arg === y) continue;
             return {
-              value: record.arg,
-              done: context.done
+              value: p.arg,
+              done: n.done
             };
           }
-          "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
+          "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg);
         }
       };
     }
-    function maybeInvokeDelegate(delegate, context) {
-      var methodName = context.method,
-        method = delegate.iterator[methodName];
-      if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
-      var record = tryCatch(method, delegate.iterator, context.arg);
-      if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
-      var info = record.arg;
-      return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
+    function maybeInvokeDelegate(e, r) {
+      var n = r.method,
+        o = e.iterator[n];
+      if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y;
+      var i = tryCatch(o, e.iterator, r.arg);
+      if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y;
+      var a = i.arg;
+      return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y);
     }
-    function pushTryEntry(locs) {
-      var entry = {
-        tryLoc: locs[0]
+    function pushTryEntry(t) {
+      var e = {
+        tryLoc: t[0]
       };
-      1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
+      1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e);
     }
-    function resetTryEntry(entry) {
-      var record = entry.completion || {};
-      record.type = "normal", delete record.arg, entry.completion = record;
+    function resetTryEntry(t) {
+      var e = t.completion || {};
+      e.type = "normal", delete e.arg, t.completion = e;
     }
-    function Context(tryLocsList) {
+    function Context(t) {
       this.tryEntries = [{
         tryLoc: "root"
-      }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
+      }], t.forEach(pushTryEntry, this), this.reset(!0);
     }
-    function values(iterable) {
-      if (iterable) {
-        var iteratorMethod = iterable[iteratorSymbol];
-        if (iteratorMethod) return iteratorMethod.call(iterable);
-        if ("function" == typeof iterable.next) return iterable;
-        if (!isNaN(iterable.length)) {
-          var i = -1,
-            next = function next() {
-              for (; ++i < iterable.length;) {
-                if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
-              }
-              return next.value = undefined, next.done = !0, next;
+    function values(e) {
+      if (e || "" === e) {
+        var r = e[a];
+        if (r) return r.call(e);
+        if ("function" == typeof e.next) return e;
+        if (!isNaN(e.length)) {
+          var o = -1,
+            i = function next() {
+              for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next;
+              return next.value = t, next.done = !0, next;
             };
-          return next.next = next;
+          return i.next = i;
         }
       }
-      return {
-        next: doneResult
-      };
+      throw new TypeError(_typeof$1(e) + " is not iterable");
     }
-    function doneResult() {
-      return {
-        value: undefined,
-        done: !0
-      };
-    }
-    return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
+    return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", {
       value: GeneratorFunctionPrototype,
       configurable: !0
-    }), defineProperty(GeneratorFunctionPrototype, "constructor", {
+    }), o(GeneratorFunctionPrototype, "constructor", {
       value: GeneratorFunction,
       configurable: !0
-    }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
-      var ctor = "function" == typeof genFun && genFun.constructor;
-      return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
-    }, exports.mark = function (genFun) {
-      return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
-    }, exports.awrap = function (arg) {
+    }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) {
+      var e = "function" == typeof t && t.constructor;
+      return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name));
+    }, e.mark = function (t) {
+      return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t;
+    }, e.awrap = function (t) {
       return {
-        __await: arg
+        __await: t
       };
-    }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () {
       return this;
-    }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
-      void 0 === PromiseImpl && (PromiseImpl = Promise);
-      var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
-      return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
-        return result.done ? result.value : iter.next();
+    }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) {
+      void 0 === i && (i = Promise);
+      var a = new AsyncIterator(wrap(t, r, n, o), i);
+      return e.isGeneratorFunction(r) ? a : a.next().then(function (t) {
+        return t.done ? t.value : a.next();
       });
-    }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
+    }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () {
       return this;
-    }), define(Gp, "toString", function () {
+    }), define(g, "toString", function () {
       return "[object Generator]";
-    }), exports.keys = function (val) {
-      var object = Object(val),
-        keys = [];
-      for (var key in object) {
-        keys.push(key);
-      }
-      return keys.reverse(), function next() {
-        for (; keys.length;) {
-          var key = keys.pop();
-          if (key in object) return next.value = key, next.done = !1, next;
+    }), e.keys = function (t) {
+      var e = Object(t),
+        r = [];
+      for (var n in e) r.push(n);
+      return r.reverse(), function next() {
+        for (; r.length;) {
+          var t = r.pop();
+          if (t in e) return next.value = t, next.done = !1, next;
         }
         return next.done = !0, next;
       };
-    }, exports.values = values, Context.prototype = {
+    }, e.values = values, Context.prototype = {
       constructor: Context,
-      reset: function reset(skipTempReset) {
-        if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) {
-          "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
-        }
+      reset: function reset(e) {
+        if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t);
       },
       stop: function stop() {
         this.done = !0;
-        var rootRecord = this.tryEntries[0].completion;
-        if ("throw" === rootRecord.type) throw rootRecord.arg;
+        var t = this.tryEntries[0].completion;
+        if ("throw" === t.type) throw t.arg;
         return this.rval;
       },
-      dispatchException: function dispatchException(exception) {
-        if (this.done) throw exception;
-        var context = this;
-        function handle(loc, caught) {
-          return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
+      dispatchException: function dispatchException(e) {
+        if (this.done) throw e;
+        var r = this;
+        function handle(n, o) {
+          return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o;
         }
-        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-          var entry = this.tryEntries[i],
-            record = entry.completion;
-          if ("root" === entry.tryLoc) return handle("end");
-          if (entry.tryLoc <= this.prev) {
-            var hasCatch = hasOwn.call(entry, "catchLoc"),
-              hasFinally = hasOwn.call(entry, "finallyLoc");
-            if (hasCatch && hasFinally) {
-              if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
-              if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
-            } else if (hasCatch) {
-              if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+        for (var o = this.tryEntries.length - 1; o >= 0; --o) {
+          var i = this.tryEntries[o],
+            a = i.completion;
+          if ("root" === i.tryLoc) return handle("end");
+          if (i.tryLoc <= this.prev) {
+            var c = n.call(i, "catchLoc"),
+              u = n.call(i, "finallyLoc");
+            if (c && u) {
+              if (this.prev < i.catchLoc) return handle(i.catchLoc, !0);
+              if (this.prev < i.finallyLoc) return handle(i.finallyLoc);
+            } else if (c) {
+              if (this.prev < i.catchLoc) return handle(i.catchLoc, !0);
             } else {
-              if (!hasFinally) throw new Error("try statement without catch or finally");
-              if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+              if (!u) throw Error("try statement without catch or finally");
+              if (this.prev < i.finallyLoc) return handle(i.finallyLoc);
             }
           }
         }
       },
-      abrupt: function abrupt(type, arg) {
-        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-          var entry = this.tryEntries[i];
-          if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
-            var finallyEntry = entry;
+      abrupt: function abrupt(t, e) {
+        for (var r = this.tryEntries.length - 1; r >= 0; --r) {
+          var o = this.tryEntries[r];
+          if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) {
+            var i = o;
             break;
           }
         }
-        finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
-        var record = finallyEntry ? finallyEntry.completion : {};
-        return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
+        i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null);
+        var a = i ? i.completion : {};
+        return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a);
       },
-      complete: function complete(record, afterLoc) {
-        if ("throw" === record.type) throw record.arg;
-        return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
+      complete: function complete(t, e) {
+        if ("throw" === t.type) throw t.arg;
+        return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y;
       },
-      finish: function finish(finallyLoc) {
-        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-          var entry = this.tryEntries[i];
-          if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
+      finish: function finish(t) {
+        for (var e = this.tryEntries.length - 1; e >= 0; --e) {
+          var r = this.tryEntries[e];
+          if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y;
         }
       },
-      "catch": function _catch(tryLoc) {
-        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-          var entry = this.tryEntries[i];
-          if (entry.tryLoc === tryLoc) {
-            var record = entry.completion;
-            if ("throw" === record.type) {
-              var thrown = record.arg;
-              resetTryEntry(entry);
+      "catch": function _catch(t) {
+        for (var e = this.tryEntries.length - 1; e >= 0; --e) {
+          var r = this.tryEntries[e];
+          if (r.tryLoc === t) {
+            var n = r.completion;
+            if ("throw" === n.type) {
+              var o = n.arg;
+              resetTryEntry(r);
             }
-            return thrown;
+            return o;
           }
         }
-        throw new Error("illegal catch attempt");
+        throw Error("illegal catch attempt");
       },
-      delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+      delegateYield: function delegateYield(e, r, n) {
         return this.delegate = {
-          iterator: values(iterable),
-          resultName: resultName,
-          nextLoc: nextLoc
-        }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
+          iterator: values(e),
+          resultName: r,
+          nextLoc: n
+        }, "next" === this.method && (this.arg = t), y;
       }
-    }, exports;
+    }, e;
   }
   module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
 })(regeneratorRuntime$1);
@@ -578,7 +559,7 @@ var Color$1 = /*#__PURE__*/function () {
   function Color() {
     _classCallCheck(this, Color);
   }
-  _createClass(Color, null, [{
+  return _createClass(Color, null, [{
     key: "RGB_BLACK",
     get:
     /**
@@ -816,7 +797,6 @@ var Color$1 = /*#__PURE__*/function () {
       };
     }
   }]);
-  return Color;
 }();
 var color = Color$1;
 
@@ -836,7 +816,7 @@ var Cast = /*#__PURE__*/function () {
   function Cast() {
     _classCallCheck(this, Cast);
   }
-  _createClass(Cast, null, [{
+  return _createClass(Cast, null, [{
     key: "toNumber",
     value:
     /**
@@ -856,6 +836,13 @@ var Cast = /*#__PURE__*/function () {
           return 0;
         }
         return value;
+      }
+      if (typeof value === 'string') {
+        // Replace full-width numbers with half-width ones.
+        value = value.replace(/[０-９＋．ｅ]/g, function (s) {
+          return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+        });
+        value = value.replace(/[-－﹣−‐⁃‑‒–—﹘―⎯⏤ーｰ─━]/g, '-');
       }
       var n = Number(value);
       if (Number.isNaN(n)) {
@@ -900,7 +887,7 @@ var Cast = /*#__PURE__*/function () {
   }, {
     key: "toString",
     value: function toString(value) {
-      return String(value);
+      return String(value).replace(/\\n/g, '\n').replace(/\\t/g, '\t');
     }
 
     /**
@@ -971,8 +958,8 @@ var Cast = /*#__PURE__*/function () {
       if (isNaN(n1) || isNaN(n2)) {
         // At least one argument can't be converted to a number.
         // Scratch compares strings as case insensitive.
-        var s1 = String(v1).toLowerCase();
-        var s2 = String(v2).toLowerCase();
+        var s1 = Cast.toString(v1).toLowerCase();
+        var s2 = Cast.toString(v2).toLowerCase();
         if (s1 < s2) {
           return -1;
         } else if (s1 > s2) {
@@ -1060,7 +1047,6 @@ var Cast = /*#__PURE__*/function () {
       return index;
     }
   }]);
-  return Cast;
 }();
 var cast = Cast;
 
@@ -1068,31 +1054,35 @@ var en = {
 	send_too_much: "Connection terminated due to too much transmission!",
 	"Websock.name": "Network Extension",
 	"websock.bind": "Bind to port [PORT]",
-	"websock.listen": "[SERVER] is listening on port [PORT]",
-	"websock.connect": "Connect to [SERVER] port [PORT]",
+	"websock.setname": "Set my address to [TEXT]",
+	"websock.close": "Close",
 	"websock.send": "Send [TEXT]",
 	"websock.sendto": "Send [TEXT] to [SENDTO]",
 	"websock.whenrecv": "When received",
 	"websock.recv": "Received data",
 	"websock.from": "From address",
 	"websock.state": "Ready state",
+	"websock.numrecv": "Number of received data",
+	"websock.nextrecv": "Get the next received data",
 	"websock.closed": "Connection closed!",
 	webapi_call: "HTTP GET [URL]",
 	json_parse: "JSON [JSON] parse [KEY]",
 	json_stringify: "JSON [JSON] + [KEY] [VALUE]"
 };
 var ja = {
-	send_too_much: "送信が過ぎなので、接続をクローズしました！",
+	send_too_much: "送信が多すぎなので、接続をクローズしました！",
 	"Websock.name": "ネットワーク拡張",
 	"websock.bind": "送受信 ポート [PORT]",
-	"websock.listen": "[SERVER] は ポート [PORT] で待ち受け",
-	"websock.connect": "接続する [SERVER] ポート [PORT]",
+	"websock.setname": "自分のアドレスを [TEXT] にする",
+	"websock.close": "切断",
 	"websock.send": "[TEXT] を送信",
 	"websock.sendto": "[TEXT] を [SENDTO] に送信",
 	"websock.whenrecv": "受信したとき",
 	"websock.recv": "受信データ",
 	"websock.from": "差出人アドレス",
 	"websock.state": "準備状態",
+	"websock.numrecv": "受信データ数",
+	"websock.nextrecv": "次の受信データ",
 	"websock.closed": "接続が クローズしました！",
 	webapi_call: "HTTP GET [URL]",
 	json_parse: "JSON [JSON] 取出 [KEY]",
@@ -1105,14 +1095,16 @@ var translations = {
 	send_too_much: "そうしんが おおすぎなので、せつぞくをクローズしました！",
 	"Websock.name": "ネットワークかくちょう",
 	"websock.bind": "そうじゅしん ポート [PORT]",
-	"websock.listen": "[SERVER] は ポート [PORT] で まちうけ",
-	"websock.connect": "せつぞくする [SERVER] ポート [PORT]",
+	"websock.setname": "じぶんのアドレスを [TEXT] にする",
+	"websock.close": "せつだん",
 	"websock.send": "[TEXT] をそうしん",
 	"websock.sendto": "[TEXT] を [SENDTO] に そうしん",
 	"websock.whenrecv": "じゅしん したとき",
 	"websock.recv": "じゅしん データ",
 	"websock.from": "さしだしにんアドレス",
 	"websock.state": "じゅんび じょうたい",
+	"websock.numrecv": "じゅしんデータすう",
+	"websock.nextrecv": "つぎの じゅしんデータ",
 	"websock.closed": "せつぞくが クローズしました！",
 	webapi_call: "HTTP GET [URL]",
 	json_parse: "JSON [JSON] とりだし [KEY]",
@@ -1148,7 +1140,7 @@ var EXTENSION_ID = 'websockExt';
  * When it was loaded as a module, 'extensionURL' will be replaced a URL which is retrieved from.
  * @type {string}
  */
-var extensionURL = 'https://pcratch.j-code.org/xcratch-extensions/websock-ext/dist/websockExt.mjs';
+var extensionURL = 'https://kitaratch.github.io/websock-ext/dist/websockExt.mjs';
 
 /**
  * Scratch 3.0 blocks for example of Xcratch.
@@ -1218,7 +1210,6 @@ var ExtensionBlocks = /*#__PURE__*/function () {
               _this.recvData.push(msg);
               //console.log("message:", this.recvData.length)
             }
-
             if (msg && msg.MSGTYPE == "KEEPALIVE") {
               _this.socket.send(JSON.stringify({
                 MSGTYPE: "KEEPALIVE"
@@ -1231,49 +1222,47 @@ var ExtensionBlocks = /*#__PURE__*/function () {
         });
       };
       // 送信待ちデータを全部送信
-      this.wsockAllSend = /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee() {
+      this.wsockAllSend = /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/regenerator.mark(function _callee() {
         var msg;
-        return regenerator.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                if (!(_this.sendData.length > 0 && _this.socket && _this.socket.readyState == 1)) {
-                  _context.next = 19;
-                  break;
-                }
-                if (!(_this.socket.bufferedAmount == 0)) {
-                  _context.next = 7;
-                  break;
-                }
-                //console.log("wsockAllSend:", this.sendData.length, this.socket.bufferedAmount)
-                msg = _this.sendData.shift();
-                _this.socket.send(msg);
-                return _context.abrupt("return", 0);
-              case 7:
-                if (!(_this.sendData.length > 100)) {
-                  _context.next = 14;
-                  break;
-                }
-                console.log("buffer over 100!", _this.sendData.length, _this.socket.bufferedAmount);
-                _this.socket.close();
-                alert(formatMessage({
-                  id: "send_too_much",
-                  default: "そうしんが おおすぎ なので、接続をクローズしました！"
-                }));
-                return _context.abrupt("return", 0);
-              case 14:
-                console.log("sleep x ms:", _this.sendData.length, _this.socket.bufferedAmount);
-                _context.next = 17;
-                return new Promise(function (s) {
-                  return setTimeout(s, _this.sendData.length * 5);
-                });
-              case 17:
-                _context.next = 0;
+        return regenerator.wrap(function (_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              if (!(_this.sendData.length > 0 && _this.socket && _this.socket.readyState == 1)) {
+                _context.next = 4;
                 break;
-              case 19:
-              case "end":
-                return _context.stop();
-            }
+              }
+              if (!(_this.socket.bufferedAmount == 0)) {
+                _context.next = 1;
+                break;
+              }
+              //console.log("wsockAllSend:", this.sendData.length, this.socket.bufferedAmount)
+              msg = _this.sendData.shift();
+              _this.socket.send(msg);
+              return _context.abrupt("return", 0);
+            case 1:
+              if (!(_this.sendData.length > 100)) {
+                _context.next = 2;
+                break;
+              }
+              console.log("buffer over 100!", _this.sendData.length, _this.socket.bufferedAmount);
+              _this.socket.close();
+              alert(formatMessage({
+                id: "send_too_much",
+                default: "そうしんが おおすぎ なので、接続をクローズしました！"
+              }));
+              return _context.abrupt("return", 0);
+            case 2:
+              console.log("sleep x ms:", _this.sendData.length, _this.socket.bufferedAmount);
+              _context.next = 3;
+              return new Promise(function (s) {
+                return setTimeout(s, _this.sendData.length * 5);
+              });
+            case 3:
+              _context.next = 0;
+              break;
+            case 4:
+            case "end":
+              return _context.stop();
           }
         }, _callee);
       }));
@@ -1291,16 +1280,15 @@ var ExtensionBlocks = /*#__PURE__*/function () {
     }
   }
   /**
+   * 送受信ポート
    * bind
    */
-  _createClass(ExtensionBlocks, [{
+  return _createClass(ExtensionBlocks, [{
     key: "websockBind",
     value: function websockBind(args) {
       try {
         this.wsockOpen();
         this.port = cast.toString(args.PORT);
-        //console.log("bind to ", this.port);
-        // room に接続
         this.wsockSend(JSON.stringify({
           MSGTYPE: "BIND",
           room: this.port
@@ -1349,81 +1337,43 @@ var ExtensionBlocks = /*#__PURE__*/function () {
       }
     }
     /**
-     * Read current message.
-     * @return {Message} - string
+     * name 名前を設定する
+     * @param {TEXT} args - name to be given.
      */
   }, {
-    key: "websockRecv",
-    value: function websockRecv() {
+    key: "websockname",
+    value: function websockname(args) {
       try {
-        return "" + this.currentData.message;
+        var text = cast.toString(args.TEXT);
+        this.wsockSend(JSON.stringify({
+          MSGTYPE: "NAME",
+          name: text
+        }));
       } catch (error) {
         console.log(error);
-        return "";
       }
     }
     /**
-         * Read current message.
-         * @return {Message} - string
-         */
-  }, {
-    key: "websockFrom",
-    value: function websockFrom() {
-      try {
-        return "" + this.currentData.from;
-      } catch (error) {
-        console.log(error);
-        return "";
-      }
-    }
-    /**
-         * Read current message.
-         * @return {Message} - string
-         */
-  }, {
-    key: "websockReadyState",
-    value: function websockReadyState() {
-      try {
-        return 0 + this.wsockReadyState();
-      } catch (error) {
-        console.log(error);
-        return 0;
-      }
-    }
-    /**
-     * 受信イベント
-     * When data Recived.
-     * @return {true} - data exist.
+     * 切断
+     * close
+     * @param {TEXT} args - name to be given.
      */
   }, {
-    key: "websockWhenRecv",
-    value: function websockWhenRecv(args) {
-      try {
-        if (this.readflag || !this.recvData.length) {
-          this.readflag = false;
-          return false;
-        }
-        this.readflag = true;
-        this.currentData = this.recvData.shift();
-        //console.log("recv:", this.recvData.length, this.currentData);
-        return true;
-      } catch (error) {
-        console.log(error);
-        return false;
-      }
+    key: "websockclose",
+    value: function websockclose(args) {
+      this.socket && this.socket.close();
     }
     /*
-        【送受信】メッセージの送受信
-        {
-            MSGTYPE: "MESSAGE",
-            sendto: "宛先ID"
-                "": 差出人を除く全員に送る（sendto が無い場合、null の場合も同じ）
-                "*": 差出人を含む全員に送る
-            from: "送信元ID"（サービスが自動付加する）
-            （その他は自由に利用）
-        }
+    【送受信】メッセージの送受信
+    {
+        MSGTYPE: "MESSAGE",
+        sendto: "宛先ID"
+            "": 差出人を除く全員に送る（sendto が無い場合、null の場合も同じ）
+            "*": 差出人を含む全員に送る
+        from: "送信元ID"（サービスが自動付加する）
+        （その他は自由に利用）
+    }
     */
-
     /**
      * 送信
      * Send Message.
@@ -1443,9 +1393,8 @@ var ExtensionBlocks = /*#__PURE__*/function () {
         console.log(error);
       }
     }
-
     /**
-     * 送信
+     * 送信（アドレス指定）
      * Send Message.
      * @param {TEXT} args - the message to be sent.
      */
@@ -1467,39 +1416,134 @@ var ExtensionBlocks = /*#__PURE__*/function () {
     }
 
     /**
+     * 受信した時（イベント）
+     * When data Recived.
+     * @return {true} - data exist.
+     */
+  }, {
+    key: "websockWhenRecv",
+    value: function websockWhenRecv(args) {
+      try {
+        if (this.readflag || !this.recvData.length) {
+          this.readflag = false;
+          return false;
+        }
+        this.readflag = true;
+        this.currentData = this.recvData.shift();
+        //console.log("recv:", this.recvData.length, this.currentData);
+        return true;
+      } catch (error) {
+        console.log(error);
+        return false;
+      }
+    }
+    /**
+     * 受信データ
+     * Read current message.
+     * @return {Message} - string
+     */
+  }, {
+    key: "websockRecv",
+    value: function websockRecv() {
+      try {
+        return "" + this.currentData.message;
+      } catch (error) {
+        console.log(error);
+        return "";
+      }
+    }
+    /**
+     * 差出人アドレス
+     * Read current message.
+     * @return {Message} - string
+     */
+  }, {
+    key: "websockFrom",
+    value: function websockFrom() {
+      try {
+        return "" + this.currentData.from;
+      } catch (error) {
+        console.log(error);
+        return "";
+      }
+    }
+    /**
+     * 準備状態
+     * Read current message.
+     * @return {Message} - string
+     */
+  }, {
+    key: "websockReadyState",
+    value: function websockReadyState() {
+      try {
+        return 0 + this.wsockReadyState();
+      } catch (error) {
+        console.log(error);
+        return 0;
+      }
+    }
+    /**
+     * 受信データ数
+     * Number of recived.
+     * @return {Number}
+     */
+  }, {
+    key: "websockNumrecv",
+    value: function websockNumrecv() {
+      try {
+        return 0 + this.recvData.length;
+      } catch (error) {
+        console.log(error);
+        return 0;
+      }
+    }
+    /**
+     * 次の受信データ
+     */
+  }, {
+    key: "websockNextrecv",
+    value: function websockNextrecv(args) {
+      try {
+        if (this.recvData.length) {
+          this.currentData = this.recvData.shift();
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    /**
      * Web API Call
      */
   }, {
     key: "webapi_call",
-    value: function () {
-      var _webapi_call = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee2(args) {
-        var url, response, s;
-        return regenerator.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _context2.prev = 0;
-                url = cast.toString(args.URL);
-                _context2.next = 4;
-                return fetch(url);
-              case 4:
-                response = _context2.sent;
-                _context2.next = 7;
-                return response.text();
-              case 7:
-                s = _context2.sent;
-                return _context2.abrupt("return", "" + s);
-              case 11:
-                _context2.prev = 11;
-                _context2.t0 = _context2["catch"](0);
-                console.log(_context2.t0);
-                return _context2.abrupt("return", "{}");
-              case 15:
-              case "end":
-                return _context2.stop();
-            }
+    value: (function () {
+      var _webapi_call = _asyncToGenerator(/*#__PURE__*/regenerator.mark(function _callee2(args) {
+        var url, response, s, _t;
+        return regenerator.wrap(function (_context2) {
+          while (1) switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.prev = 0;
+              url = cast.toString(args.URL);
+              _context2.next = 1;
+              return fetch(url);
+            case 1:
+              response = _context2.sent;
+              _context2.next = 2;
+              return response.text();
+            case 2:
+              s = _context2.sent;
+              return _context2.abrupt("return", "" + s);
+            case 3:
+              _context2.prev = 3;
+              _t = _context2["catch"](0);
+              console.log(_t);
+              return _context2.abrupt("return", "{}");
+            case 4:
+            case "end":
+              return _context2.stop();
           }
-        }, _callee2, null, [[0, 11]]);
+        }, _callee2, null, [[0, 3]]);
       }));
       function webapi_call(_x) {
         return _webapi_call.apply(this, arguments);
@@ -1509,6 +1553,7 @@ var ExtensionBlocks = /*#__PURE__*/function () {
     /**
      * json_stringfy
      */
+    )
   }, {
     key: "json_stringify",
     value: function json_stringify(args) {
@@ -1530,7 +1575,6 @@ var ExtensionBlocks = /*#__PURE__*/function () {
         return "{}";
       }
     }
-
     /**
      * json_parse
      */
@@ -1584,50 +1628,8 @@ var ExtensionBlocks = /*#__PURE__*/function () {
         extensionURL: ExtensionBlocks.extensionURL,
         blockIconURI: img,
         showStatusButton: false,
-        blocks: [
-        /*
-                        {
-                            // socket listen
-                            opcode: "websockListen",
-                            text: formatMessage({
-                                id: "websock.listen",
-                                default: "サーバー開始 サーバー名 [SERVER] ポート [PORT]",
-                                description: "サーバーを開始し受信を待機します"
-                            }),
-                            blockType: BlockType.COMMAND,
-                            arguments: {
-                                SERVER: {
-                                    type: ArgumentType.STRING,
-                                    defaultValue: "server"
-                                },
-                                PORT: {
-                                    type: ArgumentType.STRING,
-                                    defaultValue: "80"
-                                }
-                            }
-                        },
-                        {
-                            // socket connect
-                            opcode: "websockConnect",
-                            text: formatMessage({
-                                id: "websock.connect",
-                                default: "接続 サーバー名 [SERVER] ポート [PORT]",
-                                description: "サーバーに接続します"
-                            }),
-                            blockType: BlockType.COMMAND,
-                            arguments: {
-                                SERVER: {
-                                    type: ArgumentType.STRING,
-                                    defaultValue: "server"
-                                },
-                                PORT: {
-                                    type: ArgumentType.STRING,
-                                    defaultValue: "80"
-                                }
-                            }
-                        },
-        */
-        {
+        blocks: [{
+          // 送受信ポート
           // socket bind
           opcode: "websockBind",
           text: formatMessage({
@@ -1643,6 +1645,29 @@ var ExtensionBlocks = /*#__PURE__*/function () {
             }
           }
         }, {
+          // 自分のアドレス
+          opcode: "websockname",
+          text: formatMessage({
+            id: "websock.setname",
+            default: "自分のアドレスを [TEXT] にする"
+          }),
+          blockType: blockType.COMMAND,
+          arguments: {
+            TEXT: {
+              type: argumentType.STRING,
+              defaultValue: "アドレス"
+            }
+          }
+        }, {
+          // 切断
+          opcode: "websockclose",
+          text: formatMessage({
+            id: "websock.close",
+            default: "切断"
+          }),
+          blockType: blockType.COMMAND,
+          arguments: {}
+        }, {
           // 送信
           opcode: "websockSend",
           text: formatMessage({
@@ -1657,7 +1682,7 @@ var ExtensionBlocks = /*#__PURE__*/function () {
             }
           }
         }, {
-          // 送信 宛先付
+          // アドレスに送信
           opcode: "websockSendTo",
           text: formatMessage({
             id: "websock.sendto",
@@ -1675,7 +1700,7 @@ var ExtensionBlocks = /*#__PURE__*/function () {
             }
           }
         }, {
-          // 受信イベント
+          // 受信した時（イベント）
           opcode: "websockWhenRecv",
           text: formatMessage({
             id: "websock.whenrecv",
@@ -1701,13 +1726,30 @@ var ExtensionBlocks = /*#__PURE__*/function () {
           }),
           blockType: blockType.REPORTER
         }, {
-          // socket status
+          // 準備状態
           opcode: "websockReadyState",
           text: formatMessage({
             id: "websock.state",
             default: "準備状態"
           }),
           blockType: blockType.REPORTER
+        }, {
+          // 受信データ数
+          opcode: "websockNumrecv",
+          text: formatMessage({
+            id: "websock.numrecv",
+            default: "受信データ数"
+          }),
+          blockType: blockType.REPORTER
+        }, {
+          // 次の受信データ
+          opcode: "websockNextrecv",
+          text: formatMessage({
+            id: "websock.nextrecv",
+            default: "次の受信データ"
+          }),
+          blockType: blockType.COMMAND,
+          arguments: {}
         }, {
           // Web API call
           opcode: "webapi_call",
@@ -1808,7 +1850,6 @@ var ExtensionBlocks = /*#__PURE__*/function () {
       extensionURL = url;
     }
   }]);
-  return ExtensionBlocks;
 }();
 
 export { ExtensionBlocks as blockClass, entry };
